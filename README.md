@@ -1,32 +1,68 @@
 # coronary-disease-predictive-model
+Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 
-Team members: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
+## Table of Contents
+1. [Overview](#overview)
+2. [Repo Contents](#repo contents)
+3. [Exploratory Data Analysis](#exploratory data analysis)
+4. [Model Results](#model results)
+5. [Conclusions](#conclusions)
+6. [Resources](#resources)
 
-Project Description: This project is attempting to predict coronary heart disease using logistic regression to identify whether or not a patient is likely to have heart disease. In addition, PCA will be conducted in order to identify which parameters have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
+## Overview
+This project is attempting to predict coronary heart disease using logistic regression to identify whether or not a patient is likely to have heart disease. In addition, PCA will be conducted in order to identify which parameters have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
 
-Resources:
-Data Source: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data
-Medical Study: https://pubmed.ncbi.nlm.nih.gov/2756873/
-Additional Resources:
-https://www.kaggle.com/code/tanmay111999/heart-failure-prediction-cv-score-90-5-models
-https://www.kaggle.com/code/durgancegaur/a-guide-to-any-classification-problem 
+## Repo Contents
+- README.md
+- Data_Cleaning.ipynb
+- initial_EDA.ipynb
+- model_optimization.ipynb
+- PCA.ipynb
+- resources
 
-Task Roadmap:
-Conduct EDA on dataset
-Data cleaning
-May need to consider imputation for some data
-E.g., preponderance of zero Cholesterol values cannot simply be ignored or removed
-Reference: https://www.simplilearn.com/data-imputation-article#:~:text=about%20Multiple%20Imputations.-,What%20Is%20Data%20Imputation%3F,from%20a%20dataset%20each%20time
-Normalize or standardize data?
-Normalization may be better for non-Gaussian distributed data
-Address categorical (non-numerical) variables
-Create SQLite database (?)
-Requirement: “The model utilizes data retrieved from SQL or Spark (5 points)
-SQLite could be locally run (wouldn’t need to create API endpoint, launch .py app each time, CORS, etc.) using with engine.connect():
-Run PCA on data to determine which parameters explain the variability in the data the best
-Develop a logistic regression machine learning model which predicts the outcome of heart disease 
-Edit the model for different hyperparameters to optimize accuracy 
-Make a presentation to convey findings
+## Exploratory Data Analysis
 
+Ranges for total cholesterol in adults [1]:
+    Normal: Less than 200 mg/dL
+    Borderline high: 200 to 239 mg/dL
+    High: At or above 240 mg/dL
 
-Potential Visualizations: Maybe visualize the factors that have the most impact on the outcome in a small bar chart
+## Model Results
+
+I.) Basic summary of dataset and objectives
+    a.) Overall objective
+    b.) What are our variables
+    b.) how did we explore discrepancies and how did we account for them
+i.) i.e. Cholesterol values, touching on our analysis of mean/median and the possibility of using k-means
+    c.) Maybe touch on our storage of data in SQLite here, since it’s not a main feature.
+II.) Exploration of initial datasets (original, zeros dropped and zeros replaced) using hyperparamater tuner
+    a.) I think this can be high level just to show that we were able to determine the csv with     
+    Replaced values was the most effective.
+III.) Touch on our attempts to utilize sequential models to have more control of model architecture.
+    a.) Why did we choose to use certain activation functions in our initial attempt (because     
+    It’s what hyperparameter model suggested…)
+    b.) Maybe show how we chose to run it a few more times changing neurons, layers,     
+    Activation functions, etc.
+        ii.) Ultimately, even if this shows we weren’t able to get lift with this, we can
+            Highlight that we explored it.
+IV.) This section is either “nice to have” or “where does it fit”
+    a.) PCA analysis
+    b.) K-means
+    c.) classification analysis
+d.) Final Hyperparameter model - after concluding that sequential model wasn’t any better, do we take one more run at dialing in hyperparameter tuner?? I think keeping the hyperparameter examples simple in the early part of the project makes sense and serves it’s purpose to ask which dataset  is best(original, zeros dropped, zeros replaced). But maybe we want to circle back on one final model…
+
+## Conclusions
+    a.) which models worked based?
+    b.) what variables had the most weight, if we can figure that out
+    c.) bigger dataset would be better
+    d.) more complete data on cholesterol would be better (show the percentage of patients
+    Missing cholesterol values who did have heart disease… which was very high).
+    e.) are there any other models we could try
+
+## Resources
+- Data source: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data
+- Related coronary medical study: https://pubmed.ncbi.nlm.nih.gov/2756873/
+- [1]: Cholesterol guidance:
+https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/lipid-panel#:~:text=Here%20are%20the%20ranges%20for,200%20to%20239%20mg%2FdL 
+- Imputation best practices: https://www.simplilearn.com/data-imputation-article#:~:text=about%20Multiple%20Imputations.-,What%20Is%20Data%20Imputation%3F,from%20a%20dataset%20each%20time
+- A Guide to any Classification Problem: https://www.kaggle.com/code/durgancegaur/a-guide-to-any-classification-problem 
