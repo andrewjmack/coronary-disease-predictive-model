@@ -3,9 +3,9 @@ Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 
 ## Table of Contents
 1. [Overview](#overview)
-2. [Repo Contents](#repo contents)
-3. [Exploratory Data Analysis](#exploratory data analysis)
-4. [Model Results](#model results)
+2. [Repo Contents](#repo-contents)
+3. [Exploratory Data Analysis](#exploratory-data-analysis)
+4. [Model Results](#model-results)
 5. [Conclusions](#conclusions)
 6. [Resources](#resources)
 
