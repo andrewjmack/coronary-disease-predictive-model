@@ -26,6 +26,7 @@ One of the first things we noticed when exploring the data was that 172 patients
     - Normal: Less than 200 mg/dL
     - Borderline high: 200 to 239 mg/dL
     - High: At or above 240 mg/dL
+> 
 In addition, we also noted that one patient had a resting blood pressure value of zero in the dataset so this was similarly addressed in the Data_Cleaning.ipynb notebook.
 
 
