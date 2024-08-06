@@ -35,6 +35,8 @@ We created a hyperband tuner using the keras tuner package in python to test a w
 ## Data Cleaning
 To tackle the problem of zero values for cholesterol in our dataset, first we just removed all the rows with the faulty values and exported the dataset as heart_no_zeros.csv. Then, we analyzed the cholesterol variable for the remaining rows to investigate any trends. ![Box and Whisker Plot of Cholesterol](resources/images/box_whisker_cholesterol.png)
 
+This plot reveals that the distribution of cholesterol is skewed to the right with several large outliers. This information led us to decide to replace the zero values in the dataset with the median cholesterol value. This methodology allowed us to maintain as much data as possible without throwing away valuable rows. 
+
 ## Model Results
 
 I.) Basic summary of dataset and objectives
