@@ -63,7 +63,7 @@ d.) Final Hyperparameter model - after concluding that sequential model wasn’t
 
 ## Conclusions
     a.) which models worked based?
-    b.) what variables had the most weight, if we can figure that out
+    b.) ST_Slope_Up and MaxHR were good negative indicators of heart disease. ST_Slope_Flat and Oldpeak were positive indicators of heart disease
     c.) bigger dataset would be better
     d.) more complete data on cholesterol would be better (show the percentage of patients
     Missing cholesterol values who did have heart disease… which was very high).
