@@ -10,7 +10,7 @@ Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 6. [Resources](#resources)
 
 ## Overview
-This project is attempting to predict coronary heart disease using logistic regression to identify whether or not a patient is likely to have heart disease. In addition, PCA will be conducted in order to identify which parameters have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
+This project is attempting to predict coronary heart disease using deep learning models as well as other classifiers to identify whether or not a patient is likely to have heart disease. In addition, the features used for in input in our models will be investigated to determine which, if any, have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
 
 ## Repo Contents
 - README.md
@@ -21,11 +21,13 @@ This project is attempting to predict coronary heart disease using logistic regr
 - resources
 
 ## Exploratory Data Analysis
-
+One of the first things we noticed when exploring the data was that 172 patients had a cholesterol value of zero recorded in the data. Since this value is nonsensical for cholesterol, several methods to address this issue were implemented in the Data_Cleaning.ipynb notebook. 
 Ranges for total cholesterol in adults [1]:
     Normal: Less than 200 mg/dL
     Borderline high: 200 to 239 mg/dL
     High: At or above 240 mg/dL
+In addition, we also noted that one patient had a resting blood pressure value of zero in the dataset so this was similarly addressed in the Data_Cleaning.ipynb notebook.
+
 
 ## Model Results
 
