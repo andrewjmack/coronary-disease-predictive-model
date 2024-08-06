@@ -5,9 +5,10 @@ Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 1. [Overview](#overview)
 2. [Repo Contents](#repo-contents)
 3. [Exploratory Data Analysis](#exploratory-data-analysis)
-4. [Model Results](#model-results)
-5. [Conclusions](#conclusions)
-6. [Resources](#resources)
+4. [Data Cleaning](#data-cleaning)
+5. [Model Results](#model-results)
+6. [Conclusions](#conclusions)
+7. [Resources](#resources)
 
 ## Overview
 This project is attempting to predict coronary heart disease using deep learning models as well as other classifiers to identify whether or not a patient is likely to have heart disease. In addition, the features used for in input in our models will be investigated to determine which, if any, have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
@@ -17,7 +18,6 @@ This project is attempting to predict coronary heart disease using deep learning
 - Data_Cleaning.ipynb
 - initial_EDA.ipynb
 - model_optimization.ipynb
-- PCA.ipynb
 - resources
 
 ## Exploratory Data Analysis
@@ -27,7 +27,12 @@ One of the first things we noticed when exploring the data was that 172 patients
     - Borderline high: 200 to 239 mg/dL
     - High: At or above 240 mg/dL
 > 
-In addition, we also noted that one patient had a resting blood pressure value of zero in the dataset so this was similarly addressed in the Data_Cleaning.ipynb notebook.
+In addition, we also noted that one patient had a resting blood pressure value of zero in the dataset so this was similarly addressed in the Data_Cleaning.ipynb notebook. \
+
+We created a hyperband tuner using the keras tuner package in python to test a wide range of model parameters for our deep learning model. In addition, we wanted to compare how the models performed with different levels of data cleaning performed on our initial dataset. We started off with a small number of epochs (20) to give a rough picture of how each dataset impacted our model's performance. While the difference was small, the dataset in which we replaced the cholesterol values with the median value of the dataset performed the best, leading us to further optimize our model with that dataset in mind.
+
+
+## Data Cleaning
 
 
 ## Model Results
