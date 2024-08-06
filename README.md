@@ -5,10 +5,11 @@ Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 1. [Overview](#overview)
 2. [Repo Contents](#repo-contents)
 3. [Exploratory Data Analysis](#exploratory-data-analysis)
-4. [Data Cleaning](#data-cleaning)
-5. [Model Results](#model-results)
-6. [Conclusions](#conclusions)
-7. [Resources](#resources)
+4. [Feature Information](#feature-information)
+5. [Data Cleaning](#data-cleaning)
+6. [Model Results](#model-results)
+7. [Conclusions](#conclusions)
+8. [Resources](#resources)
 
 ## Overview
 This project is attempting to predict coronary heart disease using deep learning models as well as other classifiers to identify whether or not a patient is likely to have heart disease. In addition, the features used for in input in our models will be investigated to determine which, if any, have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
@@ -31,6 +32,19 @@ In addition, we also noted that one patient had a resting blood pressure value o
 
 We created a hyperband tuner using the keras tuner package in python to test a wide range of model parameters for our deep learning model. In addition, we wanted to compare how the models performed with different levels of data cleaning performed on our initial dataset. We started off with a small number of epochs (20) to give a rough picture of how each dataset impacted our model's performance. While the difference was small, the dataset in which we replaced the cholesterol values with the median value of the dataset performed the best, leading us to further optimize our model with that dataset in mind.
 
+## Feature Information
+Age: age of the patient [years]
+Sex: sex of the patient [M: Male, F: Female]
+ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]
+RestingBP: resting blood pressure [mm Hg]
+Cholesterol: serum cholesterol [mm/dl]
+FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]
+RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]
+MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]
+ExerciseAngina: exercise-induced angina [Y: Yes, N: No]
+Oldpeak: oldpeak = ST [Numeric value measured in depression]
+ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]
+HeartDisease: output class [1: heart disease, 0: Normal]
 
 ## Data Cleaning
 To tackle the problem of zero values for cholesterol in our dataset, first we just removed all the rows with the faulty values and exported the dataset as heart_no_zeros.csv. Then, we analyzed the cholesterol variable for the remaining rows to investigate any trends. ![Box and Whisker Plot of Cholesterol](resources/images/box_whisker_cholesterol.png)
