@@ -70,18 +70,17 @@ III.) Touch on our attempts to utilize sequential models to have more control of
         ii.) Ultimately, even if this shows we weren’t able to get lift with this, we can
             Highlight that we explored it.
 IV.) This section is either “nice to have” or “where does it fit”
-    a.) PCA analysis
+    a.) 
     b.) K-means
     c.) classification analysis
 d.) Final Hyperparameter model - after concluding that sequential model wasn’t any better, do we take one more run at dialing in hyperparameter tuner?? I think keeping the hyperparameter examples simple in the early part of the project makes sense and serves it’s purpose to ask which dataset  is best(original, zeros dropped, zeros replaced). But maybe we want to circle back on one final model…
 
 ## Conclusions
-    a.) which models worked based?
+    a.) The Hyperband Tuner search model got the highest accuracy with blank and a good loss value of blank.
     b.) ST_Slope_Up and MaxHR were good negative indicators of heart disease. ST_Slope_Flat and Oldpeak were positive indicators of heart disease
-    c.) bigger dataset would be better
-    d.) more complete data on cholesterol would be better (show the percentage of patients
-    Missing cholesterol values who did have heart disease… which was very high).
-    e.) are there any other models we could try
+    c.) Bigger dataset would be better
+    d.) More complete data on cholesterol would be better (88.4% of the patients who had zeros for cholesterol values had heart disease).
+    e.) We could try other classifier models, other activation functions for our deep learning models, and different clustering models to replace our cholesterol values. 
 
 ## Resources
 - Data source: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data
