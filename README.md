@@ -21,8 +21,8 @@ This project is attempting to predict coronary heart disease using deep learning
 - resources
 
 ## Exploratory Data Analysis
-One of the first things we noticed when exploring the data was that 172 patients had a cholesterol value of zero recorded in the data. Since this value is nonsensical for cholesterol, several methods to address this issue were implemented in the Data_Cleaning.ipynb notebook. \n
-Ranges for total cholesterol in adults [1]:
+One of the first things we noticed when exploring the data was that 172 patients had a cholesterol value of zero recorded in the data. Since this value is nonsensical for cholesterol, several methods to address this issue were implemented in the Data_Cleaning.ipynb notebook. 
+> Ranges for total cholesterol in adults [1]:
     - Normal: Less than 200 mg/dL
     - Borderline high: 200 to 239 mg/dL
     - High: At or above 240 mg/dL
