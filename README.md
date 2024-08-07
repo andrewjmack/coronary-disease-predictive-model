@@ -179,6 +179,43 @@ d.) Final Hyperparameter model - after concluding that sequential model wasn’t
     d.) More complete data on cholesterol would be better (88.4% of the patients who had zeros for cholesterol values had heart disease).
     e.) We could try other classifier models, other activation functions for our deep learning models, and different clustering models to replace our cholesterol values. 
 
+What to do about cholesterol??:
+•	 Our dataset included 918 patients and 172 (18.72%) were missing a cholesterol value
+•	Of the 518 patients who had heart disease, 152 were part of the population missing the value (29.29%)
+•	Those 152 patients represented 88.37% of the total population without the value
+•	In summary, that’s a large percentage of the overall population and the population with heart disease, to create a more accurate model, we would recommend this value is prioritized and recorded for all patients moving forward.
+•	As far as further optimizing our model with the given dataset, though counterintuitive, we would possibly look at dropping this column entirely vs. trying to replace the value.
+
+Size of the dataset - 
+•	918 patients is not a particularly large dataset and a larger population would give any models that we created a better opportunity to both learn from the data (train) and test it’s accuracy
+•	Data replacement of substitution methodologies such as k-means may be better able to account for missing values with an overall larger dataset
+
+
+
+
+
+More input values - 
+•	In researching the topic we found other datasets that included other variables of interest such as:
+o	Whether or not other health conditions were present (i.e. diabetes, asthma, etc.)
+o	Was the patient a smoker or tobacco user
+o	Is the patient active or do they exercise regularly
+•	Our dataset seemed to focus more specifically on certain health metrics, but additional data like this may create new insights.
+
+Weighting or bucketing - 
+•	With more time or a better understanding of the outputs of our models, we may be able to assign different weights to certain variables and get the model to prioritize them more in training.
+•	Similarly, bucketing of certain numeric values may give the model a better ability to focus on key relationships and not get bogged down with processing a wide range of unique values.
+
+
+
+A better understanding of hyperparameter tuning modeling and it’s outputs
+•	Though we did change some of the parameters of our hyperparameter tuners between phases I and III, a better understanding of how these tuners work and other methodologies we could use may yield better results, i.e. different optimizers or activation functions we might use, or how to better control steps and iterations.
+
+OVERALL CONCLUSION: 
+•	Though we were able to achieve over 90% accuracy (92.93% best result), in a medical context, we think this model would not be sufficient for practical use. 
+•	Of note, it did appear in our logistic regression and random forest data exploration that those tended to err more on the side of false positives, which is the favorable direction of false prediction in this case, but any amount of false negatives have life or death consequences. Ideally, we would like to create a model with at least 97-98% accuracy and that simply doesn’t appear to be possible with this dataset and it’s missing values. 
+
+
+
 ## Resources
 - Data source: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data
 - Related coronary medical study: https://pubmed.ncbi.nlm.nih.gov/2756873/
