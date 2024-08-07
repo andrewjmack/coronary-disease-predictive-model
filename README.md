@@ -54,6 +54,65 @@ To tackle the problem of zero values for cholesterol in our dataset, first we ju
 
 This plot reveals that the distribution of cholesterol is skewed to the right with several large outliers. This information led us to decide to replace the zero values in the dataset with the median cholesterol value. This methodology allowed us to maintain as much data as possible without throwing away valuable rows. 
 
+## Model Optimization
+
+PHASE I
+•This initial phase of testing was designed to run light hyperparameter tuner models (limited epochs, iterations and range of layers/neurons)
+•The goal of these attempts was to determine which dataset would be the best to move forward with
+•Each attempt ran 30 trials
+•Results
+
+![Attempt 1](resources/images/attempt_1_1.jpg)
+•Attempt 1 (original dataset, unaltered) - Accuracy: 87.83%, Loss: .3509
+Attempt 2 (patients with no cholesterol value dropped) - Accuracy: 87.70%, Loss: .3734
+Attempt 3 (cholesterol value replaced) – Accuracy: 88.26%, Loss: .3902
+
+•Based on these results, we decided to move forward with the dataset using replaced cholesterol values
+PHASE II
+Goal of Phase II was to use sequential modeling to see if we could improve upon the initial hyperparameter tuner model (Attempt 3)
+Tried to maintain a “scientific” approach by changing one thing at a time
+Attempt 4 - Utilized “Best Model” output to try and mirror Attempt 3
+![Attempt 4_1](resources/images/attempt_4_1.jpg)
+![Attempt 4_2](resources/images/attempt_4_2.jpg)
+Attempts 5-8 use model 4 as a base model and control one aspect of model architecture at a time
+Layers, Activation Functions, Number of Neurons and Epochs
+Attempt 4 (Base Model) - 86.96% accuracy, .5190 loss
+Attempt 5 (Manipulating Layers) - 88.04% accuracy, .3711 loss
+Attempt 6 (Increased Epochs) - 86.96% accuracy, .3952 loss
+Attempt 7 (More Activation Functions) - 84.78% accuracy, .4190 loss
+Attempt 8 (More Neurons) - 86.41% accuracy, .5504 loss
+
+Results: No increase in accuracy. 
+**note - even through various attempts not recorded (there were many), overfitting was a consistent issue.
+
+PHASE III - More Robust Hyperparameter Attempts
+
+Attempts 9-10 (with several run in each) focused on running more robust models with more epochs, a large range of layers, initial neurons and iterations tested
+Ran 508-762 trials with some run times over 1 hour!
+Attempts 9.1-9.4 done using dataset with replaced cholesterol values
+
+![Attempt 9_1](resources/images/attempt_9_1.jpg)
+![Attempt 9_2](resources/images/attempt_9_2.jpg)
+Attempt 9.1 - 88.04% accuracy, .4489 loss, 508 trials, 26 mins 49 secs
+Attempt 9.2- 88.59% accuracy, .3700 loss, 762 trials, 45 mins 24 secs
+Attempt 9.3 - 88.04% accuracy, .8813 loss, 508 trials, 27 mins, 27 secs
+Attempt 9.4 - 91.30% accuracy, 35.91% loss, 508 trials, 29 mins 36 secs
+ 
+
+As you can see Attempt 9.4 yielded the best model so far, resulting in 91.3% accuracy
+We may want to look at the output here and comment on it. 
+
+And then we have Attempt 10…
+
+Our very first attempt at running any models was a more robust hyperparameter tuner model run on the original dataset which ran for over 30 minutes with no end in site. To the point that we actually had to stop it. It resulted in accuracy of about 91%
+This guided us to our approach in attempts 1-3 to use a simple model for the sake of time.
+After attempts 3-9.3 never reached that level of accuracy, we decided to use a similar model to attempts 9 on the original, unaltered dataset (attempt 10.1 came before attempt 9.4)
+Attempt 10.1: 92.93% accuracy: .4741 loss, 508 trials, 1 hour, 14 mins, 21 secs
+Attempt 10.1: 90.70% accuracy, 36.92% loss, 508 trials, 52 mins, 32 secs
+
+Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that either ignored or weighted cholesterol values, resulting in much higher accuracy. With more time, we would like to understand this better and determine if possibly dropping the cholesterol column altogether gets better results, which is counter intuitive.
+
+
 ## Model Results
 
 I.) Basic summary of dataset and objectives
