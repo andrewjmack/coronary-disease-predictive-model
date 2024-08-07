@@ -90,7 +90,7 @@ Layers, Activation Functions, Number of Neurons and Epochs
 * Changing number of layers - 
 * Adding additional layers can give the model additional capacity to capture intricate relationships within the data. Each layer can learn different levels of abstraction, and potentially improving accuracy. Additional layers can be highly beneficial in solving complex problems. Conversely, too many layers may lead to overfitting of the data to the training set. Though we are showing just one attempt at changing the number of layers, we did find that adding additional layers beyond what we show in attempt #4 lead to a decrease in accuracy. Here we reduced the number of layers to see if that creates higher accuracy within the test set; interestingly, accuracy increased by roughly 1%.
 
-#### Attempt 6 (Increased Epochs) - 86.96% accuracy, .3952 loss
+#### Attempt 6 (Increased Epochs) - 84.78% accuracy, .4190 loss
 * Changed number of epochs, 20 to 80 - 
 In attempt #6 we used the same base architecture as attempt 4 to isolate epochs and control the other variables.
 Controlling those variables and keeping them the same would allows us to isolate the number of epochs and see if that would result in higher accuracy.
