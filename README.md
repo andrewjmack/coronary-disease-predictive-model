@@ -72,15 +72,47 @@ PHASE II
 Goal of Phase II was to use sequential modeling to see if we could improve upon the initial hyperparameter tuner model (Attempt 3)
 Tried to maintain a “scientific” approach by changing one thing at a time
 Attempt 4 - Utilized “Best Model” output to try and mirror Attempt 3
+
+Base Sequential Model¶
+This model was created by attempting to mirror the optimal model that came out of our hyperparamter tuning attempt #3
+Utilized 6 hidden layers with the tanh activation function and a sigmoid output layer.
 ![Attempt 4_1](resources/images/attempt_4_1.jpg)
 ![Attempt 4_2](resources/images/attempt_4_2.jpg)
 Attempts 5-8 use model 4 as a base model and control one aspect of model architecture at a time
 Layers, Activation Functions, Number of Neurons and Epochs
 Attempt 4 (Base Model) - 86.96% accuracy, .5190 loss
 Attempt 5 (Manipulating Layers) - 88.04% accuracy, .3711 loss
+Changing number of layers
+Adding additional layers can give the model additional capacity to capture intricate relationships within the data. Each layer can learn different levels of abstraction, and potentially improving accuracy. Additional layers can be highly beneficial in solving complex problems. Conversely, too many layers may lead to overfitting of the data to the training set. Though we are showing just one attempt at changing the number of layers, we did find that adding additional layers beyond what we show in attempt #4 lead to a decrease in accuracy. Here we reduced the number of layers to see if that creates higher accuracy within the test set; interestingly, accuracy increased by roughly 1%.
 Attempt 6 (Increased Epochs) - 86.96% accuracy, .3952 loss
+Changed number of epochs, 20 to 80
+In attempt #6 we used the same base architecture as attempt 4 to isolate epochs and control the other variables.
+Controlling those variables and keeping them the same would allows us to isolate the number of epochs and see if that would result in higher accuracy.
+An increased number of epochs gives the model more opportunities to learn from the data and adjust weights, but too many may overfit the model to the training dataset.
+As can be seen, increasing the number of epochs from 20 to 80 instead yielded a decrease in accuracy over attempt #4, and thus still unable to achieve the results of attempt #3 with the hyperparamter tuner.
 Attempt 7 (More Activation Functions) - 84.78% accuracy, .4190 loss
+Changing activation functions:¶
+1st hidden layer - tanh
+
+2nd hidden layer - tanh
+
+3rd hidden layer - relu
+
+4th hidden layer - sigmoid
+
+5th hidden layer - tanh
+
+6th hidden layer - tanh
+
+output layer - sigmoid
+
+In attempt #7 we attempted to utilize different activation functions, such as relu and sigmoid in the hidden layers. This can affect how the model interprets and transforms the inputs. Different activation functions have different properties and can capture different types of non-linearities, that may better suit the problem at hand, potentially leading to increased accuracy. In this case, it did not yield a meaningful increase in accuracy over prior attempts, while loss of roughly 55% indicates increased prediction error in this model variation over prior attempted configurations.
 Attempt 8 (More Neurons) - 86.41% accuracy, .5504 loss
+86.41% accuracy, 34.21% loss
+Changing the number of Neurons in each layer
+With attempt #8, we looked at the effect of increasing the number of neurons. All other variables we kept the same as attempt #4 to isolate the change in results.
+By increasing the number of neurons in a layer, the model can potentially capture more complex patterns in the data. This allows for better representation of the underlying relationships between the features and the target variable, potentially leading to higher accuracy.
+An increase in neurons appears to have an affect in reducing the error, given the reduced loss over many previous attempts; however, accuracy remains roughly that of the prior attempts.
 
 Results: No increase in accuracy. 
 **note - even through various attempts not recorded (there were many), overfitting was a consistent issue.
