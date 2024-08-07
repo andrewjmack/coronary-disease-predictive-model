@@ -106,7 +106,7 @@ As can be seen, increasing the number of epochs from 20 to 80 instead yielded a 
 * 6th hidden layer - tanh
 * output layer - sigmoid
 
-* In attempt #7 we attempted to utilize different activation functions, such as relu and sigmoid in the hidden layers. This can affect how the model interprets and transforms the inputs. Different activation functions have different properties and can capture different types of non-linearities, that may better suit the problem at hand, potentially leading to increased accuracy. In this case, it did not yield a meaningful increase in accuracy over prior attempts, while loss of roughly 55% indicates increased prediction error in this model variation over prior attempted configurations.
+* In attempt #7 we attempted to utilize different activation functions, such as relu and sigmoid in the hidden layers. This can affect how the model interprets and transforms the inputs. Different activation functions have different properties and can capture different types of non-linearities, that may better suit the problem at hand, potentially leading to increased accuracy. In this case, it did not yield a meaningful increase in accuracy over prior attempts, while loss of roughly .55 indicates increased prediction error in this model variation over prior attempted configurations.
 
 #### Attempt 8 (More Neurons) - 86.41% accuracy, .5504 loss
 * Changing the number of Neurons in each layer - 
