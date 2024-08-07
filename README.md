@@ -21,6 +21,8 @@ This project is attempting to predict coronary heart disease using deep learning
 - model_optimization.ipynb
 - resources holding our data files
 - resouorces/images holding our graphs and charts of analyses conducted throughout this project
+- model_tracking holds our information about model metrics and iterative improvements to our models
+- initial_data holds all our trials for our hyperband tuner
 
 ## Exploratory Data Analysis
 One of the first things we noticed when exploring the data was that 172 patients had a cholesterol value of zero recorded in the data. Since this value is nonsensical for cholesterol, several methods to address this issue were implemented in the Data_Cleaning.ipynb notebook. 
