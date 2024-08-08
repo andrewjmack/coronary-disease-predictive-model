@@ -12,7 +12,11 @@ Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 8. [Resources](#resources)
 
 ## Overview
-This project is attempting to predict coronary heart disease using deep learning models as well as other classifiers to identify whether or not a patient is likely to have heart disease. In addition, the features used for in input in our models will be investigated to determine which, if any, have the most impact on the outcome of heart disease. As a result, this project will be used to both predict heart disease in patients and give recommendations to healthcare professionals to give to their patients on how to mitigate their chance for heart disease. 
+
+Heart disease is the leading cause of death in the U.S (1 in 5 deaths in 2022) and in financial terms, cost the U.S. economy over $250 billion in 2019 [1].
+
+With this understanding, this project was an attempt to predict a patient's diagnosis of coronary heart disease using deep learning models as well as other classifiers. In addition, the features used for input in our models were investigated to determine which, if any, could have the most impact on occurences of heart disease.
+As a result, this project's goal is to both predict heart disease in patients and potentially lead to recommendations that healthcare professionals could give to their patients to mitigate their chances of developing heart disease. 
 
 ## Repo Contents
 - README.md
@@ -20,9 +24,13 @@ This project is attempting to predict coronary heart disease using deep learning
 - initial_EDA.ipynb
 - model_optimization.ipynb
 - resources holding our data files
-- resouorces/images holding our graphs and charts of analyses conducted throughout this project
-- model_tracking holds our information about model metrics and iterative improvements to our models
+    - various data files and SQLite database
+    - resources/images folder of graphs and charts pertitent to the analysis
+- model_tracking
+    - folder containing model metrics and their iterative improvements
 - initial_data holds all our trials for our hyperband tuner
+
+![ETL & Modeling](https://github.com/andrewjmack/coronary-disease-predictive-model/blob/main/resources/images/ETL_modeling_flow.png "ETL & Modeling")
 
 ## Exploratory Data Analysis
 One of the first things we noticed when exploring the data was that 172 patients had a cholesterol value of zero recorded in the data. Since this value is nonsensical for cholesterol, several methods to address this issue were implemented in the Data_Cleaning.ipynb notebook. 
@@ -147,6 +155,8 @@ After attempts 3-9.3 never reached that level of accuracy, we decided to use a s
 
 Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that either ignored or weighted cholesterol values, resulting in much higher accuracy. With more time, we would like to understand this better and determine if possibly dropping the cholesterol column altogether gets better results, which is counter intuitive.
 
+![Attempts](https://github.com/andrewjmack/coronary-disease-predictive-model/blob/main/model_tracking/model_results_barchart.png "Attempts: Accuracy & Loss")
+
 
 ## Conclusions
     a.) The Hyperband Tuner search model got the highest accuracy with blank and a good loss value of blank.
@@ -162,18 +172,18 @@ Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that eithe
 * In summary, that’s a large percentage of the overall population and the population with heart disease, to create a more accurate model, we would recommend this value is prioritized and recorded for all patients moving forward.
 * As far as further optimizing our model with the given dataset, though counterintuitive, we would possibly look at dropping this column entirely vs. trying to replace the value.
 
-#### Size of the dataset - 
+#### Size of the dataset
 * 918 patients is not a particularly large dataset and a larger population would give any models that we created a better opportunity to both learn from the data (train) and test it’s accuracy
 * Data replacement of substitution methodologies such as k-means may be better able to account for missing values with an overall larger dataset
 
-#### More input values - 
+#### More input values
 * In researching the topic we found other datasets that included other variables of interest such as:
 * Whether or not other health conditions were present (i.e. diabetes, asthma, etc.)
 * Was the patient a smoker or tobacco user
 * Is the patient active or do they exercise regularly
 * Our dataset seemed to focus more specifically on certain health metrics, but additional data like this may create new insights.
 
-#### Weighting or bucketing - 
+#### Weighting or bucketing
 * With more time or a better understanding of the outputs of our models, we may be able to assign different weights to certain variables and get the model to prioritize them more in training.
 * Similarly, bucketing of certain numeric values may give the model a better ability to focus on key relationships and not get bogged down with processing a wide range of unique values.
 
@@ -185,8 +195,8 @@ Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that eithe
 * Of note, it did appear in our logistic regression and random forest data exploration that those tended to err more on the side of false positives, which is the favorable direction of false prediction in this case, but any amount of false negatives have life or death consequences. Ideally, we would like to create a model with at least 97-98% accuracy and that simply doesn’t appear to be possible with this dataset and it’s missing values. 
 
 
-
 ## Resources
+[1]: “Heart Disease Facts”, US Centers for Disease Control & Prevention (“CDC”), https://www.cdc.gov/heart-disease/data-research/facts-stats/index.html (August 6, 2024)
 - Data source: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data
 - Related coronary medical study: https://pubmed.ncbi.nlm.nih.gov/2756873/
 - [1]: Cholesterol guidance:
