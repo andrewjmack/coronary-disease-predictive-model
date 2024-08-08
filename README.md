@@ -194,10 +194,10 @@ Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that eithe
 
 
 ## Resources
-[1]: “Heart Disease Facts”, US Centers for Disease Control & Prevention (“CDC”), https://www.cdc.gov/heart-disease/data-research/facts-stats/index.html (August 6, 2024)
+- [1]: “Heart Disease Facts”, US Centers for Disease Control & Prevention (“CDC”), https://www.cdc.gov/heart-disease/data-research/facts-stats/index.html (August 6, 2024)
 - Data source: https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction/data
 - Related coronary medical study: https://pubmed.ncbi.nlm.nih.gov/2756873/
-- [1]: Cholesterol guidance:
+- Cholesterol guidance:
 https://www.hopkinsmedicine.org/health/treatment-tests-and-therapies/lipid-panel#:~:text=Here%20are%20the%20ranges%20for,200%20to%20239%20mg%2FdL 
 - Imputation best practices: https://www.simplilearn.com/data-imputation-article#:~:text=about%20Multiple%20Imputations.-,What%20Is%20Data%20Imputation%3F,from%20a%20dataset%20each%20time
 - A Guide to any Classification Problem: https://www.kaggle.com/code/durgancegaur/a-guide-to-any-classification-problem 
