@@ -12,11 +12,9 @@ Collaborators: Jack Runge, Eric Price, Jesse Joffray, Andrew Mack
 8. [Resources](#resources)
 
 ## Overview
+![Heart Disease](https://github.com/andrewjmack/coronary-disease-predictive-model/blob/main/resources/images/CHD.png "[1] Source: Heart Disease Facts, US Centers for Disease Control & Prevention")
 
-Heart disease is the leading cause of death in the U.S (1 in 5 deaths in 2022) and in financial terms, cost the U.S. economy over $250 billion in 2019 [1].
-
-With this understanding, this project was an attempt to predict a patient's diagnosis of coronary heart disease using deep learning models as well as other classifiers. In addition, the features used for input in our models were investigated to determine which, if any, could have the most impact on occurences of heart disease.
-As a result, this project's goal is to both predict heart disease in patients and potentially lead to recommendations that healthcare professionals could give to their patients to mitigate their chances of developing heart disease. 
+Understanding the outsized impact of heart disease on health outcomes in the U.S., this project was an attempt to predict a patient's diagnosis of coronary heart disease ("CHD") using deep learning models as well as other classifiers. In addition, the features used for input in our models were investigated to determine which, if any, could have the most impact on occurences of heart disease. As a result, the goasl was to both predict heart disease in patients and potentially lead to recommendations that healthcare professionals could give to their patients to mitigate their chances of developing heart disease.
 
 ## Repo Contents
 - README.md
