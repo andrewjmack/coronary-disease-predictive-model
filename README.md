@@ -125,7 +125,11 @@ An increase in neurons appears to have an affect in reducing the error, given th
 
 ## PHASE III - More Robust Hyperparameter Attempts
 
-* Attempts 9-10 (with several run in each) focused on running more robust models with more epochs, a large range of layers, initial neurons and iterations tested
+* Attempts 9-10 (with several runs in each) focused on running more robust models with more epochs, a larger range of layers, initial neurons and iterations tested.
+* Up to 200 epochs
+* Upper limit of first layer neurons increased from 10 to 100
+* Upper limit of layers increased from 6 to 10
+* Up to 3 iterations vs 1
 Ran 508-762 trials with some run times over 1 hour!
 * Attempts 9.1-9.4 done using dataset with replaced cholesterol values
 
@@ -151,7 +155,7 @@ After attempts 3-9.3 never reached that level of accuracy, we decided to use a s
 * Attempt 10.1: 92.93% accuracy: .4741 loss, 508 trials, 1 hour, 14 mins, 21 secs
 * Attempt 10.1: 90.70% accuracy, 36.92% loss, 508 trials, 52 mins, 32 secs
 
-Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that either ignored or weighted cholesterol values, resulting in much higher accuracy. With more time, we would like to understand this better and determine if possibly dropping the cholesterol column altogether gets better results, which is counter intuitive.
+Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that either ignored or put less weight on cholesterol values, resulting in much higher accuracy. With more time, we would like to understand this better and determine if possibly dropping the cholesterol column altogether gets better results, which is counter intuitive.
 
 ![Attempts](https://github.com/andrewjmack/coronary-disease-predictive-model/blob/main/model_tracking/model_results_barchart.png "Attempts: Accuracy & Loss")
 
