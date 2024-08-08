@@ -130,8 +130,9 @@ An increase in neurons appears to have an affect in reducing the error, given th
 * Upper limit of first layer neurons increased from 10 to 100
 * Upper limit of layers increased from 6 to 10
 * Up to 3 iterations vs 1
-Ran 508-762 trials with some run times over 1 hour!
-* Attempts 9.1-9.4 done using dataset with replaced cholesterol values
+* Ran 508-762 trials with some run times over 1 hour!
+
+ ### Attempts 9.1-9.4 done using dataset with replaced cholesterol values
 
 ![Attempt 9_1](resources/images/attempt_9_1.jpg)
 
