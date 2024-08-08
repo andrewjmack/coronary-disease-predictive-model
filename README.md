@@ -159,21 +159,21 @@ Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that eithe
 ## Conclusions
 
 #### What to do about cholesterol??:
-* Our dataset included 918 patients and 172 (18.72%) were missing a cholesterol value
-* Of the 518 patients who had heart disease, 152 were part of the population missing the value (29.29%)
-* Those 152 patients represented 88.37% of the total population without the value
+* Our dataset included 918 patients and 172 (18.72%) were missing a cholesterol value.
+* Of the 518 patients who had heart disease, 152 were part of the population missing the value (29.29%).
+* Those 152 patients represented 88.37% of 172 patients with no cholesterol value.
 * In summary, that’s a large percentage of the overall population and the population with heart disease, to create a more accurate model, we would recommend this value is prioritized and recorded for all patients moving forward.
 * As far as further optimizing our model with the given dataset, though counterintuitive, we would possibly look at dropping this column entirely vs. trying to replace the value.
 
 #### Size of the dataset
-* 918 patients is not a particularly large dataset and a larger population would give any models that we created a better opportunity to both learn from the data (train) and test it’s accuracy
-* Data replacement of substitution methodologies such as k-means may be better able to account for missing values with an overall larger dataset
+* 918 patients is not a particularly large dataset and a larger population would give any models that we created a better opportunity to both learn from the data (train) and test it’s accuracy.
+* Data replacement or substitution methodologies such as k-means may be better able to account for missing values with a larger dataset.
 
 #### More input values
 * In researching the topic we found other datasets that included other variables of interest such as:
 * Whether or not other health conditions were present (i.e. diabetes, asthma, etc.)
-* Was the patient a smoker or tobacco user
-* Is the patient active or do they exercise regularly
+* Was the patient a smoker or tobacco user?
+* Is the patient active or do they exercise regularly?
 * Our dataset seemed to focus more specifically on certain health metrics, but additional data like this may create new insights.
 
 #### Weighting or bucketing
