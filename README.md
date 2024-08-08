@@ -157,11 +157,6 @@ Hypothesis: Perhaps somewhere in the 508 trials the tuner ran a model that eithe
 
 
 ## Conclusions
-    a.) The Hyperband Tuner search model got the highest accuracy with blank and a good loss value of blank.
-    b.) ST_Slope_Up and MaxHR were good negative indicators of heart disease. ST_Slope_Flat and Oldpeak were positive indicators of heart disease
-    c.) Bigger dataset would be better
-    d.) More complete data on cholesterol would be better (88.4% of the patients who had zeros for cholesterol values had heart disease).
-    e.) We could try other classifier models, other activation functions for our deep learning models, and different clustering models to replace our cholesterol values. 
 
 #### What to do about cholesterol??:
 * Our dataset included 918 patients and 172 (18.72%) were missing a cholesterol value
